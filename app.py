@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-kinoko_count:3
-takenoko_count:5
+kinoko_count = 3
+takenoko_count = 5
 messages = ['Kinoko is wonderful!', 'Takenoko is awesome!']
 
 @app.route('/')
