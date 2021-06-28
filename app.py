@@ -26,7 +26,7 @@ def answer():
     message_html = ''
     for i in range(len(messages)):
         message = messages[i]
-        message_html += '<div class="alart {1}" role="alart">{0]</div>\n'.format(message, 'alart-warning ms=5' if i % 2 == 0 else 'alart-success me-5')
+        message_html += '<div class="alart {1}" role="alart">{0}</div>\n'.format(message, 'alart-warning ms=5' if i % 2 == 0 else 'alart-success me-5')
 
     return render_template('vote.html', **vars())
 
