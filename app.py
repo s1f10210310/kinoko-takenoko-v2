@@ -33,7 +33,7 @@ def answer():
         message = re.sub(r'<', r'&gt;', message)
         message = re.sub(r'\*(.+)\*', r'<strong>\1</strong>', message)
         message = re.sub(r'(\d{2,3})-\d+-\d+', r'\1-****-****', message)
-        message = re.sub(r'(http://|https://)[a-zA-Z0-9-_^/?:&=%+#.]+', r'<a href="\(http://|https://)[a-zA-Z0-9-_^/?:&=%+#.]+">\(http://|https://)[a-zA-Z0-9-_^/?:&=%+#.]+</a>', message)
+        message = re.sub(r'(http://|https://)[a-zA-Z0-9-_^/?:&=%+#.]+', r'<a href="\4">\4</a>', message)
         message_html += '<div class="alart {1}" role="alart">{0}</div>\n'.format(message, 'alart-warning ms=5' if i % 2 == 0 else 'alart-success me-5')
 
     return render_template('vote.html', **vars())
